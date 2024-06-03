@@ -1,0 +1,15 @@
+<div class="container">
+  <h1 class="mt-5">Detalle del Todo</h1>
+
+  <div *ngIf="todo">
+    <p><strong>ID:</strong> {{ todo.id }}</p>
+    <p><strong>Título:</strong> {{ todo.title }}</p>
+    <p><strong>Completado:</strong> {{ todo.completed ? 'Sí' : 'No' }}</p>
+  </div>
+
+  <div *ngIf="apiError" class="alert alert-danger" role="alert">
+    Hubo un error al cargar los datos. Por favor, inténtelo de nuevo más tarde.
+  </div>
+
+  <button class="btn btn-secondary mt-3" (click)="goBack()">Atrás</button>
+</div>
